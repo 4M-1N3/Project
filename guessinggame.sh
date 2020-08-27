@@ -1,7 +1,7 @@
 echo "how many files are in the current directory ?"
 read response
 
-n=$(ls | wc -l)
+n=$(ls -A | wc -l)
 
 while [[ $response != $n ]]
 do
