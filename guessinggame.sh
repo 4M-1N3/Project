@@ -1,7 +1,7 @@
 echo "how many files are in the current directory ?"
 read response
 
-n=$(ls -A | wc -l)
+n=$(ls -A | egrep [^guessinggame.sh] | wc -l)
 
 while [[ $response != $n ]]
 do
