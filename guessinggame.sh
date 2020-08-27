@@ -5,7 +5,15 @@ n=$(ls -A | wc -l)
 
 while [[ $response != $n ]]
 do
-	source evaluate.sh
+	function evaluate {
+	if [[ $response =~ ^[0-9]+$ ]]
+	then
+		value=1
+	else
+		value=0
+	fi
+	}
+
 	evaluate
 
 	if [[ $value -eq 0 ]]
