@@ -1,13 +1,13 @@
 #!/user/bin/env bash
 # File guessinggame.sh
 
-# A script that ask continuously the user to guess the number of files in the current directory# 
+# A script that ask continuously the user to guess the number of files in the current directory # 
 
 
 echo "how many files are in the current directory ?"
 read response
 
-n=$(ls -A | egrep [^guessinggame.sh] | wc -l)         # n= number of files in the current directory except the guessinggame.sh #
+n=$(ls -A | egrep [^guessinggame.sh] | wc -l)             # n= number of files in the current directory except the guessinggame.sh #
 
 while [[ $response != $n ]]
 do
